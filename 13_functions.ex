@@ -101,16 +101,13 @@ defmodule Functions do
   end
 
   koan "The result of a function can be piped into another function as its first argument" do
-    # iex(1)> result =
-    #   ...(1)>       "full-name"
+    #   iex(1)> result = "full-name"
     #   "full-name"
     #   iex(2)>  result = "full-name" |> String.split("-")
     #   ["full", "name"]
-    #   iex(3)>  result = "full-name" |> String.split("-")       |> Enum.map(&String.capitalize/1)
+    #   iex(3)>       result = "full-name" |> String.split("-") |> Enum.map(&String.capitalize/1)
     #   ["Full", "Name"]
-    #   iex(4)>       result = "full-name" |> String.split("-") |> Enum.map(&String.capitalize/1)
-    #   ["Full", "Name"]
-    #   iex(5)>       result = "full-name" |> String.split("-") |> Enum.map(&String.capitalize/1) |> Enum.join(" ")
+    #   iex(4)>       result = "full-name" |> String.split("-") |> Enum.map(&String.capitalize/1) |> Enum.join(" ")
     #   "Full Name"
 
     result =
